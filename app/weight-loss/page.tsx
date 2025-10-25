@@ -262,19 +262,19 @@ export default function WeightLossPage() {
                 number: '01',
                 title: 'Complete our assessment',
                 description: 'Answer questions about your health, lifestyle, and weight loss goals. We\'ll assess your medical history and determine the best treatment approach for your unique needs. Takes about 5 minutes.',
-                image: '/images/Levels1.png',
+                image: '/images/levels1.png',
               },
               {
                 number: '02',
                 title: 'Expert medical review',
                 description: 'Our team of specialist doctors carefully review your information. They assess your suitability for treatment and create a tailored plan that considers your medical history, lifestyle, and weight loss goals.',
-                image: '/images/Levels2.png',
+                image: '/images/levels2.png',
               },
               {
                 number: '03',
                 title: 'Receive your treatment',
                 description: 'Once approved, your medication is delivered discreetly to your door with clear instructions. We include everything you need to get started safely and effectively.',
-                image: '/images/Levels3.png',
+                image: '/images/levels3.png',
               },
               {
                 number: '04',

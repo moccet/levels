@@ -15,19 +15,19 @@ export default function HowItWorksPage() {
       number: '01',
       title: 'Take assessment',
       description: 'Complete our comprehensive medical questionnaire. We\'ll ask about your health history, lifestyle, goals, and any medications you\'re currently taking. This helps us understand your unique needs and create a personalised plan.',
-      image: '/images/Levels1.png',
+      image: '/images/levels1.png',
     },
     {
       number: '02',
       title: 'Expert review',
       description: 'Our team of specialist doctors and clinicians carefully review your information. They assess your suitability for treatment and create a tailored plan that considers your medical history, lifestyle, and weight loss goals.',
-      image: '/images/Levels2.png',
+      image: '/images/levels2.png',
     },
     {
       number: '03',
       title: 'Start your journey',
       description: 'Once approved, your treatment is delivered discreetly to your door. You\'ll have access to our app where you can track progress, message your care team, and access educational resources to support your journey.',
-      image: '/images/Levels3.png',
+      image: '/images/levels3.png',
     },
     {
       number: '04',

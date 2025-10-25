@@ -79,7 +79,7 @@ export default function HomePage() {
             <div className="bg-white rounded-[var(--radius-card)] overflow-hidden shadow-[var(--shadow-medium)] hover:shadow-[var(--shadow-heavy)] transition-all duration-200 ease-in-out max-w-md w-full">
               <div className="w-full aspect-[4/3] overflow-hidden">
                 <img
-                  src="/images/Levels3.png"
+                  src="/images/levels3.png"
                   alt="Weight Loss"
                   className="w-full h-full object-cover"
                 />
@@ -121,19 +121,19 @@ export default function HomePage() {
                 step: '01',
                 title: 'Take assessment',
                 description: 'Complete our medical questionnaire to help us understand your needs and goals.',
-                image: '/images/Levels1.png',
+                image: '/images/levels1.png',
               },
               {
                 step: '02',
                 title: 'Expert review',
                 description: 'Our medical team reviews your information and creates your personalised plan.',
-                image: '/images/Levels2.png',
+                image: '/images/levels2.png',
               },
               {
                 step: '03',
                 title: 'Start your journey',
                 description: 'Get your treatment delivered and access ongoing support from our team.',
-                image: '/images/Levels3.png',
+                image: '/images/levels3.png',
               },
             ].map((item) => (
               <div key={item.step} className="flex flex-col">
