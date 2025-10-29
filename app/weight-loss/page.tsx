@@ -1,6 +1,10 @@
 import React from 'react';
 import { Button, Badge } from '../components/ui';
 import TestimonialsCarousel from '../components/sections/TestimonialsCarousel';
+import StatsSection from '../components/sections/StatsSection';
+import GradientDivider from '../components/sections/GradientDivider';
+import WeightLossCalculator from '../components/sections/WeightLossCalculator';
+import HealthBenefitsSection from '../components/sections/HealthBenefitsSection';
 import type { Metadata } from 'next';
 import ScrollTrigger from '../how-it-works/ScrollTrigger';
 
@@ -144,6 +148,75 @@ export default function WeightLossPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Switch Commitment Section */}
+      <section className="bg-white py-[56px] md:py-[120px]">
+        <div className="page-container">
+          <p className="text-body-4 text-[#172117] mb-[var(--spacing-4x)]">
+            Levels's Switch Commitment
+          </p>
+          <h2 className="text-heading-2 font-light text-[#172117] mb-[var(--spacing-4x)] max-w-4xl">
+            Already on treatment? Switch with Levels
+          </h2>
+          <p className="text-body-3 text-[#172117] mb-[var(--spacing-12x)] max-w-3xl">
+            Mounjaro prices have increased. Switch to Wegovy with Levels to stay on track for less. Our commitment to you:
+          </p>
+
+          {/* Wegovy Image */}
+          <div className="w-full rounded-[var(--radius-card)] overflow-hidden mb-[var(--spacing-12x)] bg-[#f5e8e3]">
+            <img
+              src="/images/wegovy-switch.png"
+              alt="Wegovy injection pen"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+
+          {/* Three Benefits */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--spacing-8x)]">
+            <div className="flex gap-[var(--spacing-6x)]">
+              <div className="bg-[#e8e8e8] rounded-[var(--radius-large)] w-[80px] h-[80px] flex items-center justify-center shrink-0">
+                <span className="text-[48px] font-light text-[#172117]">1</span>
+              </div>
+              <div>
+                <h3 className="text-body-2 font-medium text-[#172117] mb-[var(--spacing-3x)]">
+                  Switch to an equivalent dose
+                </h3>
+                <p className="text-body-4 text-[#172117]">
+                  Switch to Wegovy at an equivalent dose to your current Mounjaro treatment. No need to restart or take a break.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-[var(--spacing-6x)]">
+              <div className="bg-[#e8e8e8] rounded-[var(--radius-large)] w-[80px] h-[80px] flex items-center justify-center shrink-0">
+                <span className="text-[48px] font-light text-[#172117]">2</span>
+              </div>
+              <div>
+                <h3 className="text-body-2 font-medium text-[#172117] mb-[var(--spacing-3x)]">
+                  Immediate side effect relief
+                </h3>
+                <p className="text-body-4 text-[#172117]">
+                  Get side effects medication included with your first order, and speak to a clinician within minutes to adjust your dose — all at no extra cost.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-[var(--spacing-6x)]">
+              <div className="bg-[#e8e8e8] rounded-[var(--radius-large)] w-[80px] h-[80px] flex items-center justify-center shrink-0">
+                <span className="text-[48px] font-light text-[#172117]">3</span>
+              </div>
+              <div>
+                <h3 className="text-body-2 font-medium text-[#172117] mb-[var(--spacing-3x)]">
+                  Commit and save
+                </h3>
+                <p className="text-body-4 text-[#172117]">
+                  Commit to a longer plan to save up to £20 every month.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -357,122 +430,103 @@ export default function WeightLossPage() {
         </div>
       </section>
 
-      {/* How it Works - Timeline */}
-      <section className="page-container py-[56px] md:py-[120px]">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-heading-2 text-center mb-[var(--spacing-16x)]">
-            How it works
-          </h2>
+      {/* Weight Loss Calculator */}
+      <WeightLossCalculator />
 
-          <div className="flex flex-col gap-[var(--spacing-20x)]">
-            {[
-              {
-                number: '01',
-                title: 'Complete our assessment',
-                description: 'Answer questions about your health, lifestyle, and weight loss goals. We\'ll assess your medical history and determine the best treatment approach for your unique needs. Takes about 5 minutes.',
-                image: '/images/levels1.png',
-              },
-              {
-                number: '02',
-                title: 'Expert medical review',
-                description: 'Our team of specialist doctors carefully review your information. They assess your suitability for treatment and create a tailored plan that considers your medical history, lifestyle, and weight loss goals.',
-                image: '/images/levels2.png',
-              },
-              {
-                number: '03',
-                title: 'Receive your treatment',
-                description: 'Once approved, your medication is delivered discreetly to your door with clear instructions. We include everything you need to get started safely and effectively.',
-                image: '/images/levels3.png',
-              },
-              {
-                number: '04',
-                title: 'Ongoing support',
-                description: 'Your dedicated care team monitors your progress and adjusts your treatment as needed. Regular check-ins, coaching sessions, and 24/7 support ensure you stay on track and achieve sustainable results.',
-                image: '/images/levels4.png',
-              },
-            ].map((step, index) => (
-              <div
-                key={step.number}
-                className={`flex flex-col ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                } gap-[var(--spacing-8x)] md:gap-[var(--spacing-12x)] items-center`}
-              >
-                {/* Image */}
-                <div className="w-full md:w-1/2">
-                  <div className="rounded-[var(--radius-card)] overflow-hidden aspect-square">
-                    <img
-                      src={step.image}
-                      alt={step.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
+      {/* Stats Section */}
+      <StatsSection />
 
-                {/* Content */}
-                <div className="w-full md:w-1/2 flex flex-col gap-[var(--spacing-4x)]">
-                  <div className="text-[80px] md:text-[120px] font-light text-[var(--color-surface-neutral-medium)] leading-none">
-                    {step.number}
-                  </div>
-                  <h3 className="text-heading-2">{step.title}</h3>
-                  <p className="text-body-2 text-[var(--color-text-dark)]">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Health Benefits Section */}
+      <HealthBenefitsSection />
 
-      {/* Results Section */}
-      <section className="bg-[var(--color-surface-white-xLight)] py-[56px] md:py-[120px]">
+      {/* Gradient Divider */}
+      <GradientDivider />
+
+            {/* Testimonials */}
+      <TestimonialsCarousel />
+
+      {/* Testimonials Section */}
+      <section className="bg-[#f5f1ed] py-[56px] md:py-[120px]">
         <div className="page-container">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-heading-2 mb-[var(--spacing-8x)]">
-              Real results from real people
-            </h2>
-            <p className="text-body-2 text-[var(--color-text-dark)] mb-[var(--spacing-14x)]">
-              Join thousands who have achieved their weight loss goals with Levels.
+          <div className="mb-[var(--spacing-8x)]">
+            <p className="text-body-4 text-[#172117] mb-[var(--spacing-4x)] uppercase tracking-wider">
+              Testimonials
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--spacing-8x)] mb-[var(--spacing-14x)]">
-              {[
-                { metric: '15kg', label: 'Average weight loss' },
-                { metric: '92%', label: 'Patient satisfaction' },
-                { metric: '6 months', label: 'Average time to goal' },
-              ].map((stat) => (
-                <div key={stat.label} className="flex flex-col gap-[var(--spacing-2x)]">
-                  <div className="text-[var(--font-size-xxxxLarge)] font-light text-[var(--color-action-medium)]">
-                    {stat.metric}
-                  </div>
-                  <div className="text-body-3 text-[var(--color-text-dark)]">
-                    {stat.label}
-                  </div>
+            <div className="flex items-center justify-between">
+              <h2 className="text-heading-1 font-light text-[#172117]">
+                Levels is transforming people's lives
+              </h2>
+              <div className="hidden md:flex gap-[var(--spacing-3x)]">
+                <button className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-colors">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 16L6 10L12 4" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+                <button className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-colors">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M8 4L14 10L8 16" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Trustpilot */}
+          <div className="flex items-center gap-[var(--spacing-3x)] mb-[var(--spacing-12x)]">
+            <div className="flex gap-[2px]">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <div key={star} className="w-5 h-5 bg-[#00b67a] flex items-center justify-center">
+                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
                 </div>
               ))}
             </div>
-            <Button variant="primary" size="large" href="/weight-loss/results">
-              See more results
-            </Button>
+            <span className="text-body-4 text-[#172117]">
+              TrustScore 4.7/5 · 12102 reviews
+            </span>
           </div>
-        </div>
-      </section>
 
-      {/* Testimonials */}
-      <TestimonialsCarousel />
+          {/* Testimonial Card */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[var(--spacing-6x)]">
+            {/* Left: Text Card */}
+            <div className="bg-white rounded-[var(--radius-card)] p-[var(--spacing-10x)]">
+              <div className="mb-[var(--spacing-6x)]">
+                <div className="text-[80px] font-light text-[#172117] leading-none">21 <span className="text-heading-2">kg</span></div>
+                <p className="text-body-3 text-[#172117]">Lost in 6 months</p>
+              </div>
+              <p className="text-body-3 text-[#172117] mb-[var(--spacing-8x)]">
+                This time, it wasn't just another diet. With coaching, medication, and real support, I lost 21kg, started going to the gym, and finally started loving the woman I saw in the mirror. For the first time in years, I feel proud, strong, and ...
+              </p>
+              <button className="border border-[#172117] text-[#172117] px-[var(--spacing-8x)] py-[var(--spacing-3x)] rounded-full text-body-4 hover:bg-[#172117] hover:text-white transition-colors">
+                Read story
+              </button>
+            </div>
 
-      {/* CTA Section */}
-      <section className="bg-gradient-to-br from-[#dad8fa] via-[#dfcacf] to-[#f7ad8a] py-[56px] md:py-[120px]">
-        <div className="page-container text-center">
-          <h2 className="text-heading-2 text-[var(--color-text-xDark)] mb-[var(--spacing-6x)]">
-            Start your weight loss journey today
-          </h2>
-          <p className="text-body-2 text-[var(--color-text-dark)] mb-[var(--spacing-8x)] max-w-2xl mx-auto">
-            Take the first step towards a healthier you. Complete our quick assessment
-            to see which treatment is right for you.
-          </p>
-          <Button variant="primary" size="large" href="/weight-loss/assessment" className="bg-black text-white hover:bg-black/90">
-            Get started today
-          </Button>
+            {/* Right: Before/After Photos */}
+            <div className="grid grid-cols-2 gap-[var(--spacing-4x)]">
+              <div className="relative rounded-[var(--radius-card)] overflow-hidden aspect-[3/4]">
+                <img
+                  src="/images/before.jpg"
+                  alt="Day 1"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-4 left-4 bg-white/90 px-3 py-1 rounded-full text-body-4 text-[#172117]">
+                  Day 1
+                </div>
+              </div>
+              <div className="relative rounded-[var(--radius-card)] overflow-hidden aspect-[3/4]">
+                <img
+                  src="/images/after.jpg"
+                  alt="Month 6"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-4 left-4 bg-white/90 px-3 py-1 rounded-full text-body-4 text-[#172117]">
+                  Month 6
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
