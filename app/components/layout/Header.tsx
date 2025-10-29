@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Pages with light backgrounds should always show dark navbar
-  const lightBackgroundPages = ['/about-us'];
+  const lightBackgroundPages = ['/about-us', '/weight-loss'];
   const forceDarkNav = lightBackgroundPages.some(page => pathname?.startsWith(page));
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({
       <div className={`hidden md:block fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${className}`}>
         <div className={`transition-all duration-300 border-b ${
           isScrolled || forceDarkNav
-            ? 'bg-white/60 backdrop-blur-md shadow-sm border-gray-200'
+            ? 'bg-white backdrop-blur-md shadow-sm border-gray-200'
             : 'bg-transparent border-white'
         }`}>
           <div className="w-full px-[var(--spacing-6x)] md:px-[var(--spacing-10x)]">
@@ -96,7 +96,7 @@ const Header: React.FC<HeaderProps> = ({
       <div className={`md:hidden fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${className}`}>
         <div className={`transition-all duration-300 border-b ${
           isScrolled || forceDarkNav
-            ? 'bg-white/60 backdrop-blur-md shadow-sm border-gray-200'
+            ? 'bg-white backdrop-blur-md shadow-sm border-gray-200'
             : 'bg-transparent border-white'
         }`}>
           <div className="w-full px-[var(--spacing-4x)]">

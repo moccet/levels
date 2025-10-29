@@ -13,30 +13,138 @@ export default function WeightLossPage() {
   return (
     <div className="flex flex-col">
       <ScrollTrigger />
-      {/* Spacer for fixed header */}
-      <div className="h-[120px] md:h-[150px] bg-white" />
 
       {/* Hero Section */}
-      <section className="relative min-h-[500px] md:min-h-[700px] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div
-          className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/images/background.png)' }}
-        />
-
+      <section className="relative bg-[#f6f1e7] pt-[120px] md:pt-[150px] rounded-b-[var(--radius-card)]">
         {/* Content */}
-        <div className="page-container relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-display text-white mb-[var(--spacing-6x)]">
-              Weight loss that works
+        <div className="page-container py-[var(--spacing-16x)] md:py-[var(--spacing-20x)]">
+          <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
+            <h1 className="text-heading-1 font-light text-[#172117] mb-[var(--spacing-6x)] max-w-[550px]">
+              {['Weight', 'loss', 'built', 'for', 'your', 'health'].map((word, index) => (
+                <React.Fragment key={index}>
+                  <span
+                    className="inline-block opacity-0 animate-fade-in"
+                    style={{
+                      animationDelay: `${index * 150}ms`,
+                      animationFillMode: 'forwards'
+                    }}
+                  >
+                    {word}
+                  </span>
+                  {index < 5 && ' '}
+                </React.Fragment>
+              ))}
             </h1>
-            <p className="text-body-1 text-white mb-[var(--spacing-8x)]">
-              Clinically proven treatments combined with expert support to help you
-              achieve sustainable weight loss.
+            <p className="text-body-3 text-[#172117] mb-[var(--spacing-8x)] max-w-[450px]">
+              Your health is personal, and so is our approach. At Levels, we build a personalised treatment plan to help you lose weight and feel your best — now and for years to come.
             </p>
-            <Button variant="inverted" size="large" href="#treatments">
-              Explore treatments
+            <Button
+              variant="primary"
+              size="large"
+              href="/weight-loss/assessment"
+              className="bg-black text-white hover:bg-black/90 mb-[var(--spacing-12x)] !text-[14px]"
+            >
+              Is treatment right for me?
             </Button>
+
+            {/* TrustPilot Section */}
+            <div className="flex items-center gap-[var(--spacing-3x)]">
+              <div className="flex gap-[2px]">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <div key={star} className="w-5 h-5 bg-[#00b67a] flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                  </div>
+                ))}
+              </div>
+              <span className="text-[12px] text-[#172117]">
+                TrustScore 4.8/5
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Image Gallery - Full Width */}
+        <div className="w-full px-[var(--spacing-6x)] md:px-[var(--spacing-10x)] pb-[var(--spacing-16x)]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--spacing-4x)]">
+            <div className="rounded-[var(--radius-card)] overflow-hidden aspect-[3/4]">
+              <img
+                src="/images/coaching-app.jpg"
+                alt="Weight loss journey"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="rounded-[var(--radius-card)] overflow-hidden aspect-[3/4]">
+              <img
+                src="/images/medication-card.jpg"
+                alt="Active lifestyle"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="rounded-[var(--radius-card)] overflow-hidden aspect-[3/4]">
+              <img
+                src="/images/personalised-plan.jpg"
+                alt="Levels app"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* USP Carousel */}
+      <section className="bg-white py-[var(--spacing-6x)] border-y border-gray-200 relative">
+        <div className="flex items-center">
+          {/* Fixed Trustpilot */}
+          <div className="flex items-center gap-[var(--spacing-3x)] px-[var(--spacing-6x)] md:px-[var(--spacing-10x)] bg-white z-10">
+            <div className="flex gap-[2px]">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <div key={star} className="w-4 h-4 bg-[#00b67a] flex items-center justify-center">
+                  <svg className="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </div>
+              ))}
+            </div>
+            <span className="text-body-4 text-[#172117] font-medium whitespace-nowrap">Trustpilot</span>
+          </div>
+
+          {/* Scrolling Items */}
+          <div className="flex-1 overflow-hidden">
+            <div className="flex animate-scroll">
+              {[...Array(2)].map((_, setIndex) => (
+                <div key={setIndex} className="flex items-center gap-[var(--spacing-12x)] px-[var(--spacing-6x)] whitespace-nowrap">
+                  <div className="flex items-center gap-[var(--spacing-3x)]">
+                    <svg className="w-5 h-5 text-[#172117]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <span className="text-body-4 text-[#172117]">Trusted by 100k UK customers</span>
+                  </div>
+
+                  <div className="flex items-center gap-[var(--spacing-3x)]">
+                    <svg className="w-5 h-5 text-[#172117]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                    </svg>
+                    <span className="text-body-4 text-[#172117]">Free next-day delivery</span>
+                  </div>
+
+                  <div className="flex items-center gap-[var(--spacing-3x)]">
+                    <svg className="w-5 h-5 text-[#172117]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-body-4 text-[#172117]">Clinically proven medication</span>
+                  </div>
+
+                  <div className="flex items-center gap-[var(--spacing-3x)]">
+                    <svg className="w-5 h-5 text-[#172117]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                    <span className="text-body-4 text-[#172117]">Cancel anytime subscription</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -173,13 +173,28 @@ const StatsSection: React.FC<StatsSectionProps> = ({ className = '' }) => {
 
         {/* University Partnerships */}
         <div className="border-t border-white/20 pt-[var(--spacing-8x)] mt-[var(--spacing-12x)] md:mt-[var(--spacing-16x)]">
-          <p className="text-body-4 text-center mb-[var(--spacing-6x)] opacity-60">
-            In collaboration with leading educational and research institutions
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-[var(--spacing-8x)]">
-            {['Imperial', 'Oxford', 'Bristol', 'UEG', 'Ulster'].map((uni) => (
-              <div key={uni} className="text-body-3 opacity-60">{uni}</div>
-            ))}
+          <div className="relative rounded-[var(--radius-card)] px-[var(--spacing-12x)] py-[var(--spacing-16x)] md:px-[var(--spacing-16x)] md:py-[var(--spacing-20x)]" style={{
+            background: 'radial-gradient(ellipse 150% 120% at center, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.4) 60%, rgba(255, 255, 255, 0.1) 85%, rgba(255, 255, 255, 0) 100%)'
+          }}>
+            <p className="text-body-4 text-center mb-[var(--spacing-6x)] text-[#172117]">
+              In collaboration with leading educational and research institutions
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-[var(--spacing-8x)]">
+              {[
+                { name: 'Imperial', logo: '/images/imperial-logo.png' },
+                { name: 'Oxford', logo: '/images/oxford-logo.png' },
+                { name: 'Harvard', logo: '/images/harvard-logo.png' },
+                { name: 'UCL', logo: '/images/ucl-logo.png' },
+                { name: 'Cambridge', logo: '/images/cambridge-logo.png' }
+              ].map((uni) => (
+                <img
+                  key={uni.name}
+                  src={uni.logo}
+                  alt={`${uni.name} logo`}
+                  className="h-8 md:h-10"
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
