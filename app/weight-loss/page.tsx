@@ -272,52 +272,6 @@ export default function WeightLossPage() {
         </div>
       </section>
 
-      {/* How GLP-1 Medications Work */}
-      <section className="page-container py-[56px] md:py-[120px]">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-heading-2 mb-[var(--spacing-14x)] text-center">
-            How GLP-1 medications work
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--spacing-8x)]">
-            <div className="flex flex-col items-center text-center gap-[var(--spacing-4x)]">
-              <div className="w-16 h-16 rounded-full bg-[#E8DCC8]/30 flex items-center justify-center">
-                <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-heading-3">Reduce appetite</h3>
-              <p className="text-body-3 text-[var(--color-text-dark)]">
-                Signals your brain that you're full, helping you eat less without constant hunger.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center text-center gap-[var(--spacing-4x)]">
-              <div className="w-16 h-16 rounded-full bg-[#E8DCC8]/30 flex items-center justify-center">
-                <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-heading-3">Control blood sugar</h3>
-              <p className="text-body-3 text-[var(--color-text-dark)]">
-                Regulates insulin response and blood glucose levels, reducing cravings and energy crashes.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center text-center gap-[var(--spacing-4x)]">
-              <div className="w-16 h-16 rounded-full bg-[#E8DCC8]/30 flex items-center justify-center">
-                <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-              </div>
-              <h3 className="text-heading-3">Slow digestion</h3>
-              <p className="text-body-3 text-[var(--color-text-dark)]">
-                Food stays in your stomach longer, keeping you satisfied between meals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
       {/* Weight Loss Calculator */}
       <WeightLossCalculator />
 
