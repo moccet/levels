@@ -435,9 +435,8 @@ export default function WeightLossPage() {
 
       {/* Stats Section */}
       <StatsSection />
-
-      {/* Health Benefits Section */}
-      <HealthBenefitsSection />
+{/* 
+      <HealthBenefitsSection /> */}
 
       {/* Gradient Divider */}
       <GradientDivider />
