@@ -24,34 +24,30 @@ const HealthBenefitsSection: React.FC<HealthBenefitsSectionProps> = ({ className
   ];
 
   return (
-    <section className={`bg-gradient-to-b from-[#fef9f5] to-[#f5e8e3] py-[56px] md:py-[120px] ${className}`}>
-      <div className="page-container">
-        <h2 className="text-heading-1 font-light text-[#172117] text-center mb-[var(--spacing-16x)] max-w-4xl mx-auto">
+    <section className={`relative py-[56px] md:py-[120px] overflow-hidden ${className}`}>
+      {/* Gradient Background */}
+      <div
+        className="absolute inset-0 w-full h-full"
+        style={{
+          background: 'linear-gradient(180deg, #fdfcfb 0%, #fef5ed 25%, #f5d5c3 50%, #e8d4c8 70%, #d9e3dd 100%)',
+        }}
+      />
+
+      <div className="page-container relative z-10">
+        <h2 className="text-heading-1 font-light text-[#172117] text-center mb-[var(--spacing-16x)] max-w-3xl mx-auto">
           Lose weight now, protect your health for life
         </h2>
 
-        <div className="flex flex-col gap-[var(--spacing-12x)] max-w-5xl mx-auto">
+        <div className="flex flex-col max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="grid grid-cols-1 md:grid-cols-2 gap-[var(--spacing-8x)] items-center"
+              className={`grid grid-cols-1 md:grid-cols-2 gap-[var(--spacing-4x)] md:gap-[var(--spacing-8x)] py-[var(--spacing-6x)] md:py-[var(--spacing-8x)] ${
+                index !== benefits.length - 1 ? 'border-b border-white/40' : ''
+              }`}
             >
-              {/* Left: Icon and Title */}
-              <div className="flex items-center gap-[var(--spacing-6x)]">
-                <div className="w-20 h-20 rounded-full overflow-hidden shrink-0">
-                  <img
-                    src={benefit.image}
-                    alt={benefit.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-heading-3 text-[#172117]">{benefit.title}</h3>
-              </div>
-
-              {/* Right: Description */}
-              <div>
-                <p className="text-body-3 text-[#172117]">{benefit.description}</p>
-              </div>
+              <h3 className="text-body-2 font-normal text-[#172117]">{benefit.title}</h3>
+              <p className="text-body-4 text-[#172117] leading-relaxed font-light">{benefit.description}</p>
             </div>
           ))}
         </div>
