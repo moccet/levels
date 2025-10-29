@@ -33,13 +33,13 @@ const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({ className =
       quote: "The support and guidance from the Levels team has been incredible. I feel healthier and more confident than ever.",
       name: 'Sarah',
       category: 'Menopause',
-      image: '/images/medication-card.jpg',
+      image: '/images/sarah.jpg',
     },
     {
       quote: "I've tried countless diets over the years but nothing stuck. Levels gave me the medical support and structure I needed to finally see real, lasting results.",
       name: 'James',
       category: 'Weight Loss',
-      image: '/images/personalised-plan.jpg',
+      image: '/images/james.jpg',
     },
   ];
 
