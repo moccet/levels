@@ -19,11 +19,11 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ className = '' }) => {
   ];
 
   return (
-    <section className={`page-container py-[56px] md:py-[120px] ${className}`}>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-[var(--spacing-12x)] md:gap-[var(--spacing-16x)] max-w-5xl mx-auto">
+    <section className={`page-container py-[40px] md:py-[120px] ${className}`}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[var(--spacing-10x)] md:gap-[var(--spacing-16x)] max-w-7xl mx-auto">
         {features.map((feature, index) => (
-          <div key={index} className="flex flex-col gap-[var(--spacing-6x)]">
-            <div className="w-full aspect-[4/3] rounded-[var(--radius-card)] overflow-hidden">
+          <div key={index} className="flex flex-col gap-[var(--spacing-4x)] md:gap-[var(--spacing-6x)]">
+            <div className="w-full aspect-[3/2] rounded-[var(--radius-card)] overflow-hidden">
               <img
                 src={feature.image}
                 alt={feature.title}

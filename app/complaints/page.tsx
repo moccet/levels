@@ -34,7 +34,7 @@ export default function ComplaintsPage() {
               At Levels, we put patients at the heart of what we do, and we always aim to provide high quality services and products that meet your needs. If we're not getting something right, please let us know. All complaints, concerns and compliments are valuable feedback, and help us to improve our services for all our patients.
             </p>
             <p className="text-body-2 text-[var(--color-text-dark)] leading-relaxed mt-4">
-              Our team is happy to discuss any concerns you may have with our services or products and we will always try to resolve concerns or complaints informally. If you'd like to make a formal complaint, please email us at <a href="mailto:help@levelsweight.com" className="text-[var(--color-action-medium)] underline">help@levelsweight.com</a> with <strong>"Formal Complaint"</strong> as the subject line of your email to ensure it is identified correctly.
+              Our team is happy to discuss any concerns you may have with our services or products and we will always try to resolve concerns or complaints informally. If you'd like to make a formal complaint, please email us at <a href="mailto:levels@thewellnesslondon.com" className="text-[var(--color-action-medium)] underline">levels@thewellnesslondon.com</a> with <strong>"Formal Complaint"</strong> as the subject line of your email to ensure it is identified correctly.
             </p>
           </div>
 

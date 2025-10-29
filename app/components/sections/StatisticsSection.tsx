@@ -7,9 +7,9 @@ export interface StatisticsSectionProps {
 
 const StatisticsSection: React.FC<StatisticsSectionProps> = ({ className = '' }) => {
   return (
-    <section className={`bg-white py-[56px] md:py-[120px] ${className}`}>
+    <section className={`bg-white py-[40px] md:py-[120px] ${className}`}>
       <div className="page-container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[var(--spacing-12x)] md:gap-[var(--spacing-20x)] max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[var(--spacing-10x)] md:gap-[var(--spacing-20x)] max-w-5xl mx-auto">
           <StatCard
             percentage="53%"
             label="COACHING"

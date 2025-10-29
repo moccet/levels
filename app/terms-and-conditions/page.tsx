@@ -26,7 +26,7 @@ export default function TermsAndConditionsPage() {
       content: (
         <>
           <p>2.1. Our Site is owned and operated by Levels Limited ("we", "us" or "our"). We are a company incorporated in England and Wales. Our registered office address is: [Address]. Our VAT number is: [VAT Number]. We are a limited company.</p>
-          <p className="mt-4">2.2. You can contact us using the following email address: help@levelsweight.com</p>
+          <p className="mt-4">2.2. You can contact us using the following email address: levels@thewellnesslondon.com</p>
           <p className="mt-4">2.3. The clinicians we engage are registered in the United Kingdom with the General Pharmaceutical Council and each hold accredited pharmacist independent prescriber qualifications. The clinicians are trained in providing remote consultations and issuing prescription medicine online.</p>
           <p className="mt-4">2.4. Our pharmacy (the "Pharmacy") is located at Manual Pharmacy, Unit 1, Verda Park, Hithercroft Road, Wallingford, OX10 9SJ and registered with the General Pharmaceutical Council ("GPhC") with number 9012134.</p>
         </>
@@ -70,7 +70,7 @@ export default function TermsAndConditionsPage() {
           <p className="mt-4">7.2. You must be at least 18 years old to use our Site and purchase any products or medications available via the Site.</p>
           <p className="mt-4">7.3. From time to time, we may restrict access to some parts of our Site, or our entire Site, to users who have registered with us.</p>
           <p className="mt-4">7.4. If you choose, or you are provided with, a user identification code, password or any other piece of information as part of our security procedures, you must treat such information as confidential, and you must not disclose it to any third party. We have the right to disable any user identification code or password, whether chosen by you or allocated by us, at any time, if in our opinion you have failed to comply with any of the provisions of these terms of use.</p>
-          <p className="mt-4">7.5. If you know or suspect that anyone other than you knows your user identification code or password, you must promptly notify us at help@levelsweight.com.</p>
+          <p className="mt-4">7.5. If you know or suspect that anyone other than you knows your user identification code or password, you must promptly notify us at levels@thewellnesslondon.com.</p>
         </>
       ),
     },
@@ -95,7 +95,7 @@ export default function TermsAndConditionsPage() {
           <p className="mt-4">9.6. For prescription only medicines, if our clinicians determine based on their medical assessment of the information provided in the questionnaire that you are suitable for treatment we will issue a prescription, which will be sent to our Pharmacy. The Pharmacy will sell, supply, dispense and post prescription only medicines to you directly in its own name in accordance with our Terms of Sale.</p>
           <p className="mt-4">9.7. If the clinician requires further information, you will receive a message from them. The order will not be processed until you have replied to the clinician's message. This must be within 10 days of placing your order. If you fail to reply within this timeframe your order will be declined and you will not be charged.</p>
           <p className="mt-4">9.8. Professional codes of conduct and legal restrictions may limit the number any frequency of any item we and/or our Pharmacy are permitted to supply to you.</p>
-          <p className="mt-4">9.9. All communication between you and the clinician must be done via our secure messaging platform. The customer service email help@levelsweight.com should only be used for general website queries.</p>
+          <p className="mt-4">9.9. All communication between you and the clinician must be done via our secure messaging platform. The customer service email levels@thewellnesslondon.com should only be used for general website queries.</p>
           <p className="mt-4">9.10. We reserve the right to reject any order. If we are unable to accept your order, we will let you know.</p>
           <p className="mt-4">9.11. By registering on our Site, you will create a secure online electronic patient record which will contain the following information: (i) copy of these Terms and the Privacy Policy which you clicked and accepted; (ii) messages you receive from us; (iii) your personal details; and (vi) your orders. You acknowledge and agree that Levels Limited may archive your electronic patient records including your personal information, communication and treatments for a minimum of 8 years following the last consultation. Please see our Privacy Policy for further information.</p>
           <p className="mt-4">9.12. You must use our Site in compliance with our Acceptable Use Policy (see clause 11 below).</p>
@@ -123,7 +123,7 @@ export default function TermsAndConditionsPage() {
           <p className="mt-4">11.2. The information provided about the products is intended to be used for educational or general informational purposes only. It is not aimed at providing specific advice to any individual and should not be relied upon by you in making (or refraining from making) any decisions regarding your health or wellbeing. Please consult with a doctor or other health care practitioner before taking or refraining from any course of action or treatment.</p>
           <p className="mt-4">11.3. The content on our Site is provided without any representations, guarantees, conditions or warranties as to its accuracy or completeness or as to whether it is up to date.</p>
           <p className="mt-4">11.4. Where our Site contains links to other Sites and resources provided by third parties, these links are provided for your information only. Such links should not be interpreted as approval by us of those linked websites or information you may obtain from them. We have no control over the contents of those Sites or resources and accept no responsibility for them or for any loss or damage that may arise from your use of them.</p>
-          <p className="mt-4">11.5. This Site may include information and materials uploaded by other users of the Site, such as product reviews. This information and these materials have not been verified or approved by us. The views expressed by other users on our Site do not represent our views or values. If you wish to complain about information and materials uploaded by other users please contact us at help@levelsweight.com.</p>
+          <p className="mt-4">11.5. This Site may include information and materials uploaded by other users of the Site, such as product reviews. This information and these materials have not been verified or approved by us. The views expressed by other users on our Site do not represent our views or values. If you wish to complain about information and materials uploaded by other users please contact us at levels@thewellnesslondon.com.</p>
         </>
       ),
     },
@@ -208,7 +208,7 @@ export default function TermsAndConditionsPage() {
           <p>15.1. You may link to our home page, provided you do so in a way that is fair and legal and does not damage our reputation or take advantage of it in any way whatsoever, but you must not establish a link in such a way as to suggest any form of association, approval or endorsement on our part where none exists.</p>
           <p className="mt-4">15.2. You must not establish a link from any Site that is not owned by you.</p>
           <p className="mt-4">15.3. Our Site must not be framed on any other Site, nor may you create a link to any part of our Site other than the home page. We reserve the right to withdraw linking permission without notice. The website from which you are linking must comply in all respects with the content standards set out in our Acceptable Use Policy set out in paragraph 13 above.</p>
-          <p className="mt-4">15.4. If you wish to make any use of material on our Site other than that set out above, please address your request to: help@levelsweight.com.</p>
+          <p className="mt-4">15.4. If you wish to make any use of material on our Site other than that set out above, please address your request to: levels@thewellnesslondon.com.</p>
         </>
       ),
     },
@@ -234,7 +234,7 @@ export default function TermsAndConditionsPage() {
           <p>18.1. These terms of use and any document expressly referred to in them constitute the whole agreement between us and supersede all previous discussions, correspondence, negotiations, previous arrangement, understanding or agreement between us relating to the use of our Site.</p>
           <p className="mt-4">18.2. We may transfer our rights and obligations under these Terms to another organisation. We will always tell you in writing if this happens and we will ensure that the transfer will not affect your rights under the contract.</p>
           <p className="mt-4">18.3. If any of these Terms are found by any competent authority to be invalid, unlawful or unenforceable to any extent, such term, condition or provision will to that extent be severed from the remaining terms, conditions and provisions which will continue to be valid to the fullest extent permitted by law.</p>
-          <p className="mt-4">If you have any concerns about material which appears on our Site or concerns with regards to our services, please contact: help@levelsweight.com.</p>
+          <p className="mt-4">If you have any concerns about material which appears on our Site or concerns with regards to our services, please contact: levels@thewellnesslondon.com.</p>
         </>
       ),
     },

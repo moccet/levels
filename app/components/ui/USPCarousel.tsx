@@ -64,24 +64,67 @@ const USPCarousel: React.FC<USPCarouselProps> = ({
   const allItems = [...items, ...items];
 
   return (
-    <div className={`bg-transparent py-[var(--spacing-4x)] overflow-hidden ${className}`}>
-      <div className="flex items-center gap-[var(--spacing-8x)]">
+    <div className={`bg-transparent py-[var(--spacing-4x)] md:py-[var(--spacing-4x)] overflow-hidden ${className}`}>
+      {/* Mobile: Stacked Layout */}
+      <div className="md:hidden flex flex-col gap-[var(--spacing-3x)] px-[var(--spacing-4x)]">
         {/* Trustpilot Rating */}
-        <div className="flex items-center gap-[var(--spacing-3x)] px-[var(--spacing-6x)] shrink-0">
+        <div className="flex items-center justify-center gap-[var(--spacing-3x)]">
           <div className="flex items-center gap-[var(--spacing-2x)]">
-            {/* Trustpilot Logo */}
-            <div className="flex items-center gap-[var(--spacing-1x)]">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="#00B67A">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#00B67A">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <span className="text-[16px] font-bold text-white">Trustpilot</span>
+          </div>
+          {/* Stars */}
+          <div className="flex items-center gap-[3px]">
+            {[...Array(5)].map((_, i) => (
+              <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#00B67A">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
               </svg>
-              <span className="text-body-4 font-bold text-white">Trustpilot</span>
+            ))}
+          </div>
+        </div>
+
+        {/* Scrolling USP Items */}
+        <div className="relative overflow-hidden">
+          <div className="flex animate-scroll">
+            {allItems.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-[var(--spacing-2x)] px-[var(--spacing-3x)] shrink-0"
+              >
+                {item.icon && (
+                  <div className="text-white w-[18px] h-[18px] flex items-center justify-center">
+                    {item.icon}
+                  </div>
+                )}
+                <span className="text-[13px] text-white font-medium whitespace-nowrap">
+                  {item.text}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop: Horizontal Layout */}
+      <div className="hidden md:flex items-center gap-[var(--spacing-8x)]">
+        {/* Trustpilot Rating */}
+        <div className="flex items-center gap-[var(--spacing-4x)] px-[var(--spacing-6x)] shrink-0">
+          <div className="flex items-center gap-[var(--spacing-2x)]">
+            {/* Trustpilot Logo */}
+            <div className="flex items-center gap-[var(--spacing-2x)]">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="#00B67A">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <span className="text-body-3 font-bold text-white">Trustpilot</span>
             </div>
           </div>
 
           {/* Stars */}
-          <div className="flex items-center gap-[2px]">
+          <div className="flex items-center gap-[3px]">
             {[...Array(5)].map((_, i) => (
-              <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#00B67A">
+              <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="#00B67A">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
               </svg>
             ))}
@@ -124,7 +167,7 @@ const USPCarousel: React.FC<USPCarouselProps> = ({
         }
 
         .animate-scroll {
-          animation: scroll 20s linear infinite;
+          animation: scroll 10s linear infinite;
         }
 
         .animate-scroll:hover {

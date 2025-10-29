@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Logo from '../ui/Logo';
 import { Button } from '../ui';
 
@@ -21,8 +22,13 @@ const Header: React.FC<HeaderProps> = ({
   ],
   className = '',
 }) => {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  // Pages with light backgrounds should always show dark navbar
+  const lightBackgroundPages = ['/about-us'];
+  const forceDarkNav = lightBackgroundPages.some(page => pathname?.startsWith(page));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,15 +44,15 @@ const Header: React.FC<HeaderProps> = ({
       {/* Desktop Header */}
       <div className={`hidden md:block fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${className}`}>
         <div className={`transition-all duration-300 border-b ${
-          isScrolled
+          isScrolled || forceDarkNav
             ? 'bg-white/60 backdrop-blur-md shadow-sm border-gray-200'
             : 'bg-transparent border-white'
         }`}>
           <div className="w-full px-[var(--spacing-6x)] md:px-[var(--spacing-10x)]">
-            <div className="flex items-center justify-between py-[48px]">
+            <div className="flex items-center justify-between py-[var(--spacing-7x)]">
               {/* Left: Logo */}
               <div className={`flex items-center transition-colors duration-300 ${
-                isScrolled ? 'text-black' : 'text-white'
+                isScrolled || forceDarkNav ? 'text-black' : 'text-white'
               }`}>
                 <Logo href="/" />
               </div>
@@ -57,8 +63,8 @@ const Header: React.FC<HeaderProps> = ({
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`text-body-3 hover:opacity-80 transition-all duration-300 ${
-                      isScrolled ? 'text-black' : 'text-white'
+                    className={`text-body-4 hover:opacity-80 transition-all duration-300 ${
+                      isScrolled || forceDarkNav ? 'text-black' : 'text-white'
                     }`}
                     style={{ fontFamily: 'var(--font-poppins)', fontWeight: 500 }}
                   >
@@ -71,8 +77,8 @@ const Header: React.FC<HeaderProps> = ({
               <div className="flex items-center gap-[var(--spacing-4x)]">
                 <Link
                   href="/weight-loss/assessment"
-                  className={`inline-flex items-center justify-center px-8 py-3 rounded-full font-medium transition-all duration-300 ${
-                    isScrolled
+                  className={`inline-flex items-center justify-center px-3 py-4 rounded-full font-medium transition-all duration-300 ${
+                    isScrolled || forceDarkNav
                       ? 'border-[2.5px] border-black text-black bg-transparent hover:bg-black hover:text-white'
                       : 'border-[2.5px] border-white text-white bg-transparent hover:bg-white hover:text-black'
                   }`}
@@ -89,7 +95,7 @@ const Header: React.FC<HeaderProps> = ({
       {/* Mobile Header */}
       <div className={`md:hidden fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${className}`}>
         <div className={`transition-all duration-300 border-b ${
-          isScrolled
+          isScrolled || forceDarkNav
             ? 'bg-white/60 backdrop-blur-md shadow-sm border-gray-200'
             : 'bg-transparent border-white'
         }`}>
@@ -108,7 +114,7 @@ const Header: React.FC<HeaderProps> = ({
                 width="24"
                 height="24"
                 className={`transition-colors duration-300 ${
-                  isScrolled ? 'text-black' : 'text-white'
+                  isScrolled || forceDarkNav ? 'text-black' : 'text-white'
                 }`}
               >
                 <path
@@ -134,7 +140,7 @@ const Header: React.FC<HeaderProps> = ({
 
             {/* Center: Logo */}
             <div className={`transition-colors duration-300 ${
-              isScrolled ? 'text-black' : 'text-white'
+              isScrolled || forceDarkNav ? 'text-black' : 'text-white'
             }`}>
               <Logo href="/" />
             </div>

@@ -12,60 +12,106 @@ export const metadata: Metadata = {
 export default function TreatmentsPage() {
   const medications = [
     {
-      name: 'Mounjaro',
-      generic: '(tirzepatide)',
-      effectiveness: 'Most effective option',
-      description: 'Currently shows the most weight loss in clinical trials. Some patients achieve over 20% body weight reduction with combined GLP-1 and GIP action.',
-      image: '/images/mounjaro.png',
-    },
-    {
       name: 'Wegovy',
-      generic: '(semaglutide)',
-      effectiveness: 'Highly effective',
-      description: 'Clinically proven GLP-1 medication with excellent results. Most patients achieve 10-15% weight loss with weekly injections and lifestyle changes.',
+      weightLoss: 'Lose up to 20.7% body weight',
+      price: 'From £104',
+      activeIngredient: 'Semaglutide',
+      dosage: '0.5mg - 2.4mg',
+      administration: 'Once a week',
+      administrationType: 'Injectable',
       image: '/images/wegovy.png',
+      link: '/weight-loss/medications/wegovy',
     },
     {
-      name: 'Orlistat',
-      generic: '(oral medication)',
-      effectiveness: 'Alternative option',
-      description: 'Non-injection medication that works by reducing fat absorption. Available for patients who prefer oral medication or aren\'t suitable for GLP-1 treatments.',
+      name: 'Mounjaro',
+      weightLoss: 'Lose up to 22.5% body weight',
+      price: 'From £169',
+      activeIngredient: 'Tirzepatide',
+      dosage: '2.5mg - 15mg',
+      administration: 'Once a week',
+      administrationType: 'Injectable',
+      image: '/images/mounjaro.png',
+      link: '/weight-loss/medications/mounjaro',
+    },
+    {
+      name: 'Orlos',
+      weightLoss: 'Lose up to 8.5% body weight',
+      price: 'From £40',
+      activeIngredient: 'Orlistat',
+      dosage: '60mg',
+      administration: 'Up to 3 a day',
+      administrationType: 'Capsules',
       image: '/images/orlos.png',
+      link: '/weight-loss/medications/orlistat',
     },
   ];
 
-  const faqs = [
+  const glpFaqs = [
     {
-      question: 'What is GLP-1?',
-      answer: 'GLP-1 stands for glucagon-like peptide-1. It\'s a natural hormone your body releases after eating. GLP-1 helps control blood sugar levels, slows digestion, and reduces appetite.\n\nGLP-1 medications mimic this hormone, helping you feel fuller for longer, reducing cravings, and supporting sustainable weight loss when combined with healthy lifestyle changes.',
+      question: 'How do they work?',
+      answer: 'GLP-1 medications work by mimicking the natural GLP-1 hormone your body produces. They slow down digestion, reduce appetite, and help regulate blood sugar levels, making you feel fuller for longer and reducing cravings.',
     },
     {
-      question: 'Which medication is most effective?',
-      answer: 'Mounjaro (tirzepatide) currently shows the most weight loss in clinical trials, with some people losing over 20% of their body weight. However, the best medication for you depends on your individual health profile, medical history, and goals.\n\nOur specialist doctors review your case to recommend the most suitable treatment for your circumstances.',
+      question: 'What are they used for?',
+      answer: 'GLP-1 medications are used for weight management in adults with obesity (BMI ≥30) or overweight (BMI ≥27) with at least one weight-related condition such as high blood pressure, type 2 diabetes, or high cholesterol.',
     },
     {
-      question: 'How much weight can I expect to lose?',
-      answer: 'Most people can expect to lose between 5% and 15% of their body weight over several months, with some losing even more. Results vary based on:\n\n• The specific medication prescribed\n• Your starting weight and BMI\n• Adherence to lifestyle changes\n• Individual metabolic response\n\nSustainable weight loss typically occurs gradually over 6-12 months.',
+      question: 'Are they safe?',
+      answer: 'GLP-1 medications are FDA and MHRA approved and have been extensively studied in clinical trials. They are safe when prescribed by qualified healthcare professionals and used as directed. Our specialist doctors review your medical history to ensure treatment is appropriate for you.',
+    },
+  ];
+
+  const testimonials = [
+    {
+      weight: '48',
+      duration: '7 months',
+      quote: 'The other day, I tried on a bunch of old clothes I used to love, and they were all huge on me. I just stood there in the mirror thinking, "you did that."',
+      name: 'Kelsey',
+    },
+  ];
+
+  const experts = [
+    {
+      name: 'Earim Chaudry, MBBS',
+      title: 'Chief Medical Officer',
+      image: '/images/expert-1.jpg',
     },
     {
-      question: 'Are these medications safe?',
-      answer: 'GLP-1 medications are FDA and MHRA approved for weight management. They have been extensively studied in clinical trials involving thousands of patients.\n\nLike all medications, they can have side effects. Our specialist doctors carefully review your medical history to ensure the treatment is safe for you. You\'ll have regular check-ins to monitor your progress and address any concerns.',
+      name: 'Anna Mullany, MSc, BSc',
+      title: 'Head of Behaviour Change',
+      image: '/images/expert-2.jpg',
     },
     {
-      question: 'What are the common side effects?',
-      answer: 'The most common side effects include:\n\n• Nausea (usually mild and temporary)\n• Constipation or diarrhoea\n• Fatigue\n• Headaches\n• Injection site reactions\n\nThese effects typically improve as your body adjusts to the medication. Starting with a lower dose and gradually increasing helps minimise side effects. Your care team provides guidance on managing any symptoms.',
+      name: 'Molly Morgan, RD',
+      title: 'Lead Dietitian',
+      image: '/images/expert-3.jpg',
+    },
+  ];
+
+  const blogPosts = [
+    {
+      title: 'Wegovy 7.2mg',
+      category: 'MEDICATIONS',
+      author: 'Dr Earim Chaudry, Chief Medical Officer',
+      image: '/images/blog-1.png',
     },
     {
-      question: 'Am I eligible for treatment?',
-      answer: 'You may be eligible if you have:\n\n• A BMI of 30 or above, OR\n• A BMI of 27 or above with a weight-related condition (such as high blood pressure, prediabetes, type 2 diabetes, or PCOS)\n\nOur specialist doctors assess your complete health profile during your consultation to determine if treatment is appropriate and safe for you.',
+      title: 'Retatrutide for weight loss',
+      category: 'MEDICATIONS',
+      author: 'Dr Earim Chaudry, Chief Medical Officer',
+      image: '/images/blog-2.png',
     },
     {
-      question: 'How does the clinical assessment work?',
-      answer: 'Our assessment process is thorough but straightforward:\n\n1. Complete our online medical questionnaire\n2. Our specialist doctors review your information\n3. We may request additional details or health metrics\n4. If approved, we create a personalised treatment plan\n5. Your medication is delivered discreetly to your door\n\nThe entire process typically takes 24-48 hours from assessment to delivery.',
+      title: 'What is Orforglipiron?',
+      category: 'MEDICATIONS',
+      author: 'Dr Earim Chaudry, Chief Medical Officer',
+      image: '/images/blog-3.png',
     },
     {
-      question: 'Is this available on the NHS?',
-      answer: 'Some weight loss medications are available on the NHS, but eligibility criteria are strict and waiting times can be significant.\n\nLevels provides private access to these medications with specialist medical supervision. This means faster access, personalised care, and ongoing support throughout your weight loss journey.',
+      title: 'Switching between Wegovy & Mounjaro',
+      category: 'MEDICATIONS',
+      author: 'Dr Earim Chaudry, Chief Medical Officer',
+      image: '/images/blog-4.png',
     },
   ];
 
@@ -76,87 +122,84 @@ export default function TreatmentsPage() {
       <div className="h-[120px] md:h-[150px] bg-white" />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#dad8fa] via-[#dfcacf] to-[#f7ad8a] py-[56px] md:py-[120px]">
+      <section className="bg-[#f5ebe5] py-[56px] md:py-[80px]">
         <div className="page-container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-display text-[var(--color-text-xDark)] mb-[var(--spacing-6x)]">
-              Weight loss medications
-            </h1>
-            <p className="text-body-1 text-[var(--color-text-dark)] mb-[var(--spacing-8x)]">
-              Clinically proven GLP-1 medications and treatments, prescribed by specialist doctors and delivered to your door with ongoing support.
-            </p>
-            <Button variant="primary" size="large" href="/weight-loss" className="bg-black text-white hover:bg-black/90">
-              Start assessment
-            </Button>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[var(--spacing-12x)] items-center">
+            <div className="flex flex-col gap-[var(--spacing-6x)]">
+              <span className="inline-block px-[var(--spacing-4x)] py-[var(--spacing-2x)] bg-[#ffd4c4] rounded-full text-body-4 font-medium text-[var(--color-text-xDark)] w-fit">
+                Weight Loss
+              </span>
+              <h1 className="text-heading-2 md:text-heading-1 text-[var(--color-text-xDark)]">
+                Weight loss medications at Voy
+              </h1>
+              <p className="text-body-3 md:text-body-2 text-[var(--color-text-dark)]">
+                Your health is personal - and so is our approach. At Voy, we evaluate your unique needs, prescribe the best treatment for you, and guide you every step of the way.
+              </p>
+              <div>
+                <Button
+                  variant="primary"
+                  size="medium"
+                  href="/weight-loss"
+                  className="bg-[#1a3428] text-white hover:bg-[#1a3428]/90 rounded-full px-[var(--spacing-6x)] md:px-[var(--spacing-8x)]"
+                >
+                  Am I eligible?
+                </Button>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="relative w-full max-w-[600px]">
+                {/* Placeholder for hero images */}
+                <div className="aspect-[4/3] bg-[#f5dbd0] rounded-[var(--radius-card)] flex items-center justify-center">
+                  <span className="text-body-3 text-[var(--color-text-dark)]">Hero Image</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Introduction Section */}
+      {/* About GLP-1 Section */}
       <section className="page-container py-[56px] md:py-[120px]">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-heading-2 text-center mb-[var(--spacing-12x)]">
-            How GLP-1 medications work
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--spacing-8x)]">
-            <div className="flex flex-col items-center text-center gap-[var(--spacing-4x)]">
-              <div className="w-16 h-16 rounded-full bg-[#E8DCC8]/30 flex items-center justify-center">
-                <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-heading-4">Reduce appetite</h3>
-              <p className="text-body-3 text-[var(--color-text-dark)]">
-                Signals your brain that you're full, helping you eat less without constant hunger.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center text-center gap-[var(--spacing-4x)]">
-              <div className="w-16 h-16 rounded-full bg-[#E8DCC8]/30 flex items-center justify-center">
-                <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-heading-4">Control blood sugar</h3>
-              <p className="text-body-3 text-[var(--color-text-dark)]">
-                Regulates insulin response and blood glucose levels, reducing cravings and energy crashes.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center text-center gap-[var(--spacing-4x)]">
-              <div className="w-16 h-16 rounded-full bg-[#E8DCC8]/30 flex items-center justify-center">
-                <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-              </div>
-              <h3 className="text-heading-4">Slow digestion</h3>
-              <p className="text-body-3 text-[var(--color-text-dark)]">
-                Food stays in your stomach longer, keeping you satisfied between meals.
-              </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[var(--spacing-12x)] items-center">
+          <div className="flex items-center justify-center">
+            <div className="w-full max-w-[450px] aspect-square rounded-[var(--radius-card)] overflow-hidden">
+              <img
+                src="/images/levels3.png"
+                alt="GLP-1 Medication"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
-
-          <div className="mt-[var(--spacing-12x)] p-[var(--spacing-8x)] bg-[var(--color-surface-white-xLight)] rounded-[var(--radius-card)]">
-            <p className="text-body-2 text-[var(--color-text-dark)] text-center">
-              Most people lose between <strong>5% and 15%</strong> of their body weight over several months, with some achieving even greater results when combined with lifestyle changes.
+          <div className="flex flex-col gap-[var(--spacing-6x)]">
+            <div className="border-t border-gray-300 pt-[var(--spacing-4x)]">
+              <span className="text-body-4 text-[var(--color-text-dark)]">About GLP-1 Medication</span>
+            </div>
+            <h2 className="text-heading-3 md:text-heading-2">What are GLP-1 Medications?</h2>
+            <p className="text-body-2 text-[var(--color-text-dark)]">
+              GLP-1 medications are treatments that mimic a natural hormone in your body. They help control appetite, regulate blood sugar levels, and are clinically proven to support meaningful weight loss.
             </p>
+            <FAQAccordion items={glpFaqs} />
           </div>
         </div>
       </section>
 
       {/* Medications Section */}
-      <section className="bg-[var(--color-surface-white-xLight)] py-[56px] md:py-[120px]">
+      <section className="bg-white py-[56px] md:py-[120px]">
         <div className="page-container">
-          <h2 className="text-heading-2 text-center mb-[var(--spacing-14x)]">
-            Available medications
-          </h2>
+          <div className="text-center mb-[var(--spacing-12x)] max-w-4xl mx-auto">
+            <h2 className="text-heading-3 md:text-heading-2 mb-[var(--spacing-4x)]">
+              Everybody is different and so is every treatment at Voy
+            </h2>
+            <p className="text-body-3 md:text-body-2 text-[var(--color-text-dark)]">
+              Based on your health history, BMI and personal goals, we'll recommend the one that's right for you.
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[var(--spacing-8x)] max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--spacing-6x)] max-w-6xl mx-auto">
             {medications.map((med, index) => (
               <div
                 key={index}
-                className="bg-white rounded-[var(--radius-card)] overflow-hidden shadow-[var(--shadow-medium)] hover:shadow-[var(--shadow-heavy)] transition-all duration-200"
+                className="bg-white rounded-[var(--radius-card)] overflow-hidden border border-gray-200 hover:shadow-[var(--shadow-heavy)] transition-all duration-200 flex flex-col"
               >
                 <div className="w-full aspect-[4/3] overflow-hidden">
                   <img
@@ -165,21 +208,37 @@ export default function TreatmentsPage() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-[var(--spacing-8x)] flex flex-col gap-[var(--spacing-4x)]">
-                  <div>
-                    <h3 className="text-heading-3 text-black mb-[var(--spacing-1x)]">
-                      {med.name}
-                    </h3>
-                    <p className="text-body-4 text-[var(--color-text-dark)]">{med.generic}</p>
+                <div className="p-[var(--spacing-6x)] flex flex-col gap-[var(--spacing-4x)] flex-1">
+                  <h3 className="text-heading-3 text-black">{med.name}</h3>
+                  <p className="text-body-3 text-[var(--color-text-dark)]">{med.weightLoss}</p>
+
+                  <div className="flex flex-col gap-[var(--spacing-3x)] py-[var(--spacing-4x)] border-t border-b border-gray-200">
+                    <div className="flex justify-between items-center">
+                      <span className="text-body-4 text-[var(--color-text-dark)]">Price</span>
+                      <span className="text-body-3 font-medium text-black">{med.price}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-body-4 text-[var(--color-text-dark)]">Active Ingredient</span>
+                      <span className="text-body-4 text-black">{med.activeIngredient}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-body-4 text-[var(--color-text-dark)]">Dosage</span>
+                      <span className="text-body-4 text-black">{med.dosage}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-body-4 text-[var(--color-text-dark)]">{med.administrationType}</span>
+                      <span className="text-body-4 text-black">{med.administration}</span>
+                    </div>
                   </div>
-                  <div className="inline-block px-[var(--spacing-3x)] py-[var(--spacing-1x)] bg-[#dad8fa] rounded-full">
-                    <span className="text-body-4 font-medium text-[var(--color-text-xDark)]">
-                      {med.effectiveness}
-                    </span>
-                  </div>
-                  <p className="text-body-3 text-[var(--color-text-dark)]">
-                    {med.description}
-                  </p>
+
+                  <Button
+                    variant="primary"
+                    size="medium"
+                    href={med.link}
+                    className="bg-[#1a3428] text-white hover:bg-[#1a3428]/90 rounded-full w-full mt-auto"
+                  >
+                    Explore {med.name}
+                  </Button>
                 </div>
               </div>
             ))}
@@ -187,139 +246,241 @@ export default function TreatmentsPage() {
         </div>
       </section>
 
-      {/* Eligibility Section */}
-      <section className="page-container py-[56px] md:py-[120px]">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-heading-2 text-center mb-[var(--spacing-12x)]">
-            Who can access treatment?
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[var(--spacing-8x)]">
-            <div className="flex flex-col gap-[var(--spacing-4x)]">
-              <h3 className="text-heading-3">Eligibility criteria</h3>
-              <p className="text-body-3 text-[var(--color-text-dark)]">
-                You may be eligible for weight loss medication if you have:
-              </p>
-              <ul className="flex flex-col gap-[var(--spacing-3x)] text-body-3 text-[var(--color-text-dark)]">
-                <li className="flex gap-[var(--spacing-2x)]">
-                  <span>•</span>
-                  <span>A BMI of 30 or above</span>
-                </li>
-                <li className="flex gap-[var(--spacing-2x)]">
-                  <span>•</span>
-                  <span>A BMI of 27 or above with a weight-related health condition</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="flex flex-col gap-[var(--spacing-4x)]">
-              <h3 className="text-heading-3">Weight-related conditions</h3>
-              <p className="text-body-3 text-[var(--color-text-dark)]">
-                Conditions that may make you eligible include:
-              </p>
-              <ul className="flex flex-col gap-[var(--spacing-3x)] text-body-3 text-[var(--color-text-dark)]">
-                <li className="flex gap-[var(--spacing-2x)]">
-                  <span>•</span>
-                  <span>High blood pressure (hypertension)</span>
-                </li>
-                <li className="flex gap-[var(--spacing-2x)]">
-                  <span>•</span>
-                  <span>Type 2 diabetes or prediabetes</span>
-                </li>
-                <li className="flex gap-[var(--spacing-2x)]">
-                  <span>•</span>
-                  <span>Polycystic ovary syndrome (PCOS)</span>
-                </li>
-                <li className="flex gap-[var(--spacing-2x)]">
-                  <span>•</span>
-                  <span>High cholesterol</span>
-                </li>
-                <li className="flex gap-[var(--spacing-2x)]">
-                  <span>•</span>
-                  <span>Sleep apnoea</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-[var(--spacing-12x)] p-[var(--spacing-8x)] bg-[#f7ad8a]/20 rounded-[var(--radius-card)] border-l-4 border-[#f7ad8a]">
-            <p className="text-body-2 text-[var(--color-text-dark)]">
-              <strong>Not sure if you're eligible?</strong> Our specialist doctors will review your complete health profile during your assessment and recommend the most appropriate treatment for your circumstances.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Safety Section */}
-      <section className="bg-[var(--color-surface-white-xLight)] py-[56px] md:py-[120px]">
+      {/* Testimonials Section */}
+      <section className="bg-[#f5f5f5] py-[56px] md:py-[120px]">
         <div className="page-container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-heading-2 text-center mb-[var(--spacing-12x)]">
-              Safety and monitoring
-            </h2>
+          <div className="mb-[var(--spacing-8x)]">
+            <span className="text-body-5 font-medium text-[var(--color-text-dark)] tracking-wider">TESTIMONIALS</span>
+            <h2 className="text-heading-3 md:text-heading-2 mt-[var(--spacing-2x)]">Weight loss success stories</h2>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[var(--spacing-8x)] mb-[var(--spacing-12x)]">
-              <div className="flex flex-col gap-[var(--spacing-4x)]">
-                <h3 className="text-heading-3">Medical supervision</h3>
-                <p className="text-body-3 text-[var(--color-text-dark)]">
-                  All treatments are prescribed by specialist doctors registered with the General Medical Council. Your care team monitors your progress throughout your journey.
-                </p>
-              </div>
-
-              <div className="flex flex-col gap-[var(--spacing-4x)]">
-                <h3 className="text-heading-3">Regular check-ins</h3>
-                <p className="text-body-3 text-[var(--color-text-dark)]">
-                  We schedule regular consultations to track your progress, adjust your treatment plan, and address any concerns or side effects you may experience.
-                </p>
-              </div>
+          <div className="flex items-center gap-[var(--spacing-4x)] mb-[var(--spacing-8x)]">
+            <div className="flex gap-[var(--spacing-1x)]">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <svg key={star} className="w-5 h-5 text-[#00b67a]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                </svg>
+              ))}
             </div>
+            <span className="text-body-4 text-[var(--color-text-dark)]">TrustScore 4.7 /5 • 11932 reviews</span>
+          </div>
 
-            <div className="bg-white p-[var(--spacing-8x)] rounded-[var(--radius-card)]">
-              <h3 className="text-heading-3 mb-[var(--spacing-4x)]">Common side effects</h3>
-              <p className="text-body-3 text-[var(--color-text-dark)] mb-[var(--spacing-6x)]">
-                Like all medications, GLP-1 treatments can cause side effects. Most are mild and improve as your body adjusts:
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-[var(--spacing-8x)] items-center">
+            <div className="bg-white p-[var(--spacing-10x)] rounded-[var(--radius-card)] shadow-[var(--shadow-medium)]">
+              <div className="text-[80px] font-bold text-[var(--color-text-xDark)] leading-none">48<span className="text-heading-3 ml-2">kg</span></div>
+              <p className="text-body-3 text-[var(--color-text-dark)] mt-[var(--spacing-2x)]">Lost in 7 months</p>
+              <p className="text-body-3 text-[var(--color-text-dark)] mt-[var(--spacing-6x)] mb-[var(--spacing-6x)]">
+                "The other day, I tried on a bunch of old clothes I used to love, and they were all huge on me. I just stood there in the mirror thinking, "you did that."
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-[var(--spacing-4x)]">
-                <ul className="flex flex-col gap-[var(--spacing-2x)] text-body-3 text-[var(--color-text-dark)]">
-                  <li>• Nausea (usually temporary)</li>
-                  <li>• Constipation or diarrhoea</li>
-                  <li>• Fatigue</li>
-                </ul>
-                <ul className="flex flex-col gap-[var(--spacing-2x)] text-body-3 text-[var(--color-text-dark)]">
-                  <li>• Headaches</li>
-                  <li>• Dizziness</li>
-                  <li>• Injection site reactions</li>
-                </ul>
+              <Button
+                variant="secondary"
+                size="medium"
+                className="border-2 border-black text-black hover:bg-black hover:text-white rounded-full"
+              >
+                Kelsey's story
+              </Button>
+            </div>
+            <div className="lg:col-span-2 grid grid-cols-2 gap-[var(--spacing-4x)]">
+              <div className="aspect-square bg-[#2a4a5a] rounded-[var(--radius-card)] overflow-hidden">
+                <div className="w-full h-full flex items-center justify-center text-white">Before/After 1</div>
               </div>
-              <p className="text-body-3 text-[var(--color-text-dark)] mt-[var(--spacing-6x)]">
-                Your care team provides guidance on managing side effects and adjusting your treatment if needed.
-              </p>
+              <div className="aspect-square bg-[#d4c4b8] rounded-[var(--radius-card)] overflow-hidden">
+                <div className="w-full h-full flex items-center justify-center text-black">Before/After 2</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="page-container py-[56px] md:py-[120px]">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-heading-2 text-center mb-[var(--spacing-14x)]">
-            Frequently asked questions
-          </h2>
-          <FAQAccordion items={faqs} />
+      {/* Doctor CTA Section */}
+      <section className="bg-white py-[56px] md:py-[120px]">
+        <div className="page-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[var(--spacing-12x)] items-center">
+            <div className="flex items-center justify-center">
+              <div className="w-full max-w-[500px] aspect-[3/4] bg-[#f5dbd0] rounded-[var(--radius-card)] overflow-hidden">
+                <div className="w-full h-full flex items-center justify-center">
+                  <span className="text-body-3 text-[var(--color-text-dark)]">Doctor Image</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-[var(--spacing-6x)]">
+              <h2 className="text-heading-3 md:text-heading-2">
+                Not sure which weight loss medication is safest and most effective for you?
+              </h2>
+              <p className="text-body-2 text-[var(--color-text-dark)]">
+                Answer a few questions to get your treatment recommendation from our clinicians.
+              </p>
+              <div className="flex flex-col gap-[var(--spacing-3x)]">
+                {[
+                  'Start safely with the right dose',
+                  'Progress at your pace with guidance',
+                  'Get expert help anytime'
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-[var(--spacing-3x)]">
+                    <div className="w-6 h-6 rounded-full border-2 border-black flex items-center justify-center flex-shrink-0">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="text-body-3 text-[var(--color-text-dark)]">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div>
+                <Button
+                  variant="secondary"
+                  size="large"
+                  href="/weight-loss"
+                  className="border-2 border-black text-black hover:bg-black hover:text-white rounded-full px-[var(--spacing-8x)]"
+                >
+                  Start your assessment
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-gradient-to-br from-[#dad8fa] via-[#dfcacf] to-[#f7ad8a] py-[56px] md:py-[120px]">
-        <div className="page-container text-center">
-          <h2 className="text-heading-2 text-[var(--color-text-xDark)] mb-[var(--spacing-6x)]">
-            Ready to start your weight loss journey?
+      {/* Results/Stats Section */}
+      <section className="bg-[#1a3428] py-[56px] md:py-[120px] text-white">
+        <div className="page-container">
+          <h2 className="text-heading-3 md:text-heading-2 text-center mb-[var(--spacing-12x)]">
+            Our members experience transformational results
           </h2>
-          <p className="text-body-2 text-[var(--color-text-dark)] mb-[var(--spacing-8x)] max-w-2xl mx-auto">
-            Complete our clinical assessment to find out if weight loss medication is right for you. Our specialist doctors will review your case and create a personalised treatment plan.
-          </p>
-          <Button variant="primary" size="large" href="/weight-loss" className="bg-black text-white hover:bg-black/90">
-            Start assessment
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[var(--spacing-6x)] mb-[var(--spacing-12x)]">
+            <div className="bg-[#23442f] p-[var(--spacing-8x)] rounded-[var(--radius-card)]">
+              <div className="text-[80px] font-bold leading-none mb-[var(--spacing-4x)]">53%</div>
+              <p className="text-body-2 mb-[var(--spacing-8x)]">
+                In clinical studies members on the Voy programme lost 53% more weight than those using medication only
+              </p>
+              <div className="aspect-[16/9] bg-[#2a4a3a] rounded-lg flex items-center justify-center">
+                <span className="text-body-4">Graph Placeholder</span>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[var(--spacing-6x)]">
+              <div className="bg-[#23442f] p-[var(--spacing-8x)] rounded-[var(--radius-card)]">
+                <span className="text-body-5 font-medium tracking-wider mb-[var(--spacing-4x)] block">HEALTH IMPROVEMENT</span>
+                <p className="text-body-3 mb-[var(--spacing-6x)]">
+                  97% of patients felt their overall health had improved with the programme
+                </p>
+                <div className="aspect-square bg-[#2a4a3a] rounded-lg flex items-center justify-center">
+                  <span className="text-body-4">Donut Chart</span>
+                </div>
+              </div>
+
+              <div className="bg-[#23442f] p-[var(--spacing-8x)] rounded-[var(--radius-card)]">
+                <span className="text-body-5 font-medium tracking-wider mb-[var(--spacing-4x)] block">COACHING</span>
+                <p className="text-body-3 mb-[var(--spacing-6x)]">
+                  Engaging with the Voy programme leads to 53% more weight loss than medication alone
+                </p>
+                <div className="aspect-square bg-[#2a4a3a] rounded-lg flex items-center justify-center">
+                  <span className="text-body-4">Bar Chart</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-white/20 pt-[var(--spacing-8x)]">
+            <p className="text-body-4 text-center mb-[var(--spacing-6x)]">In partnership with leading educational and research institutions</p>
+            <div className="flex flex-wrap justify-center items-center gap-[var(--spacing-8x)]">
+              {['Imperial', 'Oxford', 'Bristol', 'UEG', 'Ulster'].map((uni) => (
+                <div key={uni} className="text-body-3 opacity-60">{uni}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experts Section */}
+      <section className="bg-white py-[56px] md:py-[120px]">
+        <div className="page-container">
+          <h2 className="text-heading-3 md:text-heading-2 text-center mb-[var(--spacing-12x)]">
+            Led by the country's leading obesity experts
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--spacing-8x)] mb-[var(--spacing-12x)]">
+            {experts.map((expert, idx) => (
+              <div key={idx} className="flex flex-col gap-[var(--spacing-4x)]">
+                <div className="relative aspect-[3/4] bg-[#f5dbd0] rounded-[var(--radius-card)] overflow-hidden">
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-body-3 text-[var(--color-text-dark)]">Expert Photo</span>
+                  </div>
+                  <button className="absolute top-[var(--spacing-4x)] right-[var(--spacing-4x)] w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-shadow">
+                    <span className="text-2xl text-black">+</span>
+                  </button>
+                </div>
+                <div>
+                  <h3 className="text-heading-4">{expert.name}</h3>
+                  <p className="text-body-4 text-[var(--color-text-dark)]">{expert.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="border-t border-gray-200 pt-[var(--spacing-8x)]">
+            <p className="text-body-4 text-center mb-[var(--spacing-6x)] text-[var(--color-text-dark)]">
+              In partnership with leading educational and research institutions
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-[var(--spacing-8x)]">
+              {['Imperial', 'Oxford', 'Bristol', 'UEG', 'Ulster'].map((uni) => (
+                <div key={uni} className="text-body-3 text-[var(--color-text-dark)]">{uni}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section className="bg-[#f5f5f5] py-[56px] md:py-[120px]">
+        <div className="page-container">
+          <div className="mb-[var(--spacing-8x)]">
+            <span className="text-body-5 font-medium text-[var(--color-text-dark)] tracking-wider">Blog</span>
+            <h2 className="text-heading-3 md:text-heading-2 mt-[var(--spacing-2x)]">Learn more about weight loss medications</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[var(--spacing-6x)] mb-[var(--spacing-8x)]">
+            {blogPosts.map((post, idx) => (
+              <div key={idx} className="bg-white rounded-[var(--radius-card)] overflow-hidden hover:shadow-[var(--shadow-medium)] transition-shadow">
+                <div className="aspect-square bg-[#f5ebe5] flex items-center justify-center">
+                  <span className="text-body-4 text-[var(--color-text-dark)]">Blog Image</span>
+                </div>
+                <div className="p-[var(--spacing-6x)]">
+                  <span className="text-body-5 font-medium text-[var(--color-text-dark)] tracking-wider">{post.category}</span>
+                  <h3 className="text-heading-4 mt-[var(--spacing-2x)] mb-[var(--spacing-4x)]">{post.title}</h3>
+                  <p className="text-body-4 text-[var(--color-text-dark)]">{post.author}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button
+              variant="primary"
+              size="large"
+              href="/blog"
+              className="bg-[#1a3428] text-white hover:bg-[#1a3428]/90 rounded-full px-[var(--spacing-10x)]"
+            >
+              Learn more
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="bg-gradient-to-b from-white to-[#e8f4f8] py-[80px] md:py-[120px]">
+        <div className="page-container text-center">
+          <h2 className="text-heading-3 md:text-heading-2 text-[var(--color-text-xDark)] mb-[var(--spacing-8x)] max-w-3xl mx-auto">
+            Start your safe, supported weight loss journey today
+          </h2>
+          <Button
+            variant="primary"
+            size="large"
+            href="/weight-loss"
+            className="bg-white text-black border-2 border-black hover:bg-black hover:text-white rounded-full px-[var(--spacing-10x)]"
+          >
+            Get started today
           </Button>
         </div>
       </section>

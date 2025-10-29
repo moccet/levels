@@ -28,7 +28,7 @@ export default function TermsOfServicePage() {
       content: (
         <>
           <p>2.1 Our Services are owned and operated by Levels Limited ("Levels", "we", "us" or "our"). We are a company incorporated in England and Wales. Our registered office address is: [Address].</p>
-          <p className="mt-4">2.2 Our VAT number is: [VAT Number]. You can contact us at help@levelsweight.com.</p>
+          <p className="mt-4">2.2 Our VAT number is: [VAT Number]. You can contact us at levels@thewellnesslondon.com.</p>
           <p className="mt-4">2.3 Our pharmacy's registered address is Unit 150, Verda Park, Hithercroft Road, Wallingford, OX10 9AT and is registered with the General Pharmaceutical Council ("GPhC") with number 9012134 ("Pharmacy").</p>
           <p className="mt-4">2.4 The clinicians we engage are registered in the United Kingdom with the General Medical Council ("GMC"), the GPhC or the Nursing and Midwifery Council (and where relevant each hold accredited pharmacist independent prescriber qualifications). Clinicians are trained to provide remote consultations, deliver treatment, and prescribe medication in an online context. The clinicians are individually accountable for the prescriptions they issue.</p>
           <p className="mt-4">2.5 If we need to contact you for any reason we will do so by in-app message, phone, email or post to the mobile telephone number, email address or postal address that is registered in your customer account ("Account"). Please note that you must provide us with a valid UK phone number on registration. When we say "writing" or "written" in these Service Terms, this includes emails or other electronic written formats.</p>

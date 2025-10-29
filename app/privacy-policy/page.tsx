@@ -245,7 +245,7 @@ export default function PrivacyPolicyPage() {
       content: (
         <>
           <p>
-            If you receive marketing communications from us, you can ask us to stop sending you marketing messages at any time by following the unsubscribe links in any marketing message or by contacting us at help@levelsweight.com.
+            If you receive marketing communications from us, you can ask us to stop sending you marketing messages at any time by following the unsubscribe links in any marketing message or by contacting us at levels@thewellnesslondon.com.
           </p>
           <p className="mt-4">
             Please note that opting out of marketing communications does not opt you out of receiving important service-related communications.
@@ -269,7 +269,7 @@ export default function PrivacyPolicyPage() {
             <li>Withdraw your consent to our processing of your personal information, where we have collected and processed it with your consent.</li>
           </ul>
           <p className="mt-4">
-            For more information, please refer to the appropriate data protection legislation or consult the Information Commissioner's Office for guidance. If you would like to exercise any of these rights, please contact us at help@levelsweight.com and let us have enough information to identify you.
+            For more information, please refer to the appropriate data protection legislation or consult the Information Commissioner's Office for guidance. If you would like to exercise any of these rights, please contact us at levels@thewellnesslondon.com and let us have enough information to identify you.
           </p>
           <p className="mt-4">
             You will not have to pay a fee to access your personal information (or to exercise any of the other rights). However, we may charge a reasonable fee if your request is clearly unfounded, repetitive, or excessive.
@@ -285,7 +285,7 @@ export default function PrivacyPolicyPage() {
       content: (
         <>
           <p>
-            Please address requests and questions about this Notice to help@levelsweight.com.
+            Please address requests and questions about this Notice to levels@thewellnesslondon.com.
           </p>
         </>
       ),

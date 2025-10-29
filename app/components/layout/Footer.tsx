@@ -32,28 +32,16 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
               <p className="text-body-4 text-[var(--color-text-dark)] ml-[28px]">Monday - Friday 9am - 5pm</p>
             </div>
 
-            {/* Email - Help */}
+            {/* Email */}
             <div className="flex flex-col gap-[var(--spacing-1x)]">
               <div className="flex items-center gap-[var(--spacing-2x)]">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <rect x="2" y="4" width="20" height="16" rx="2"/>
                   <path d="m2 7 10 7 10-7"/>
                 </svg>
-                <span className="text-body-3 font-medium text-[var(--color-text-xDark)]">help@levelsweight.com</span>
+                <span className="text-body-3 font-medium text-[var(--color-text-xDark)]">levels@thewellnesslondon.com</span>
               </div>
               <p className="text-body-4 text-[var(--color-text-dark)] ml-[28px]">We aim to reply in 24hrs</p>
-            </div>
-
-            {/* Email - Press */}
-            <div className="flex flex-col gap-[var(--spacing-1x)]">
-              <div className="flex items-center gap-[var(--spacing-2x)]">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="2" y="4" width="20" height="16" rx="2"/>
-                  <path d="m2 7 10 7 10-7"/>
-                </svg>
-                <span className="text-body-3 font-medium text-[var(--color-text-xDark)]">press@levelsweight.com</span>
-              </div>
-              <p className="text-body-4 text-[var(--color-text-dark)] ml-[28px]">Press & media inquiries</p>
             </div>
 
             {/* Disclaimer */}

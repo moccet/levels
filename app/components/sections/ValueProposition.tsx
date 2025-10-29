@@ -7,9 +7,9 @@ export interface ValuePropositionProps {
 
 const ValueProposition: React.FC<ValuePropositionProps> = ({ className = '' }) => {
   return (
-    <section className={`bg-white min-h-screen flex items-center justify-center ${className}`}>
-      <div className="max-w-[900px] mx-auto text-center px-[var(--spacing-6x)]">
-        <h2 className="text-[50px] md:text-[80px] leading-[1.1] mb-[var(--spacing-8x)] md:mb-[var(--spacing-12x)] font-light">
+    <section className={`bg-white h-[70vh] flex items-center justify-center py-[var(--spacing-10x)] md:py-0 ${className}`}>
+      <div className="max-w-[900px] mx-auto text-center px-[var(--spacing-4x)] md:px-[var(--spacing-6x)]">
+        <h2 className="text-[32px] md:text-[64px] leading-[1.15] md:leading-[1.1] mb-[var(--spacing-6x)] md:mb-[var(--spacing-12x)] font-light max-w-[550px] mx-auto">
           <span className="text-[#F4B8A4]">Weight</span>
           {' '}
           <span className="text-[#D8D8D8]">loss</span>
@@ -18,7 +18,7 @@ const ValueProposition: React.FC<ValuePropositionProps> = ({ className = '' }) =
         </h2>
 
         <div className="flex justify-center">
-          <Button variant="dark" size="large" href="/weight-loss">
+          <Button variant="dark" size="medium" href="/weight-loss" className="py-5 px-10 text-body-4 md:text-body-3">
             Explore Weight Loss
           </Button>
         </div>
